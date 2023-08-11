@@ -23,11 +23,13 @@ class Calculator {
         this.operation = undefined;
     }
 
+    // Delete one character from the current operand and update the display.
     delete() {
         this.currentOperand = this.currentOperand.slice(0, -1);
         this.updateDisplay();
     }
 
+    // Append a number to the current operand, checking for the presence of a decimal point.
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return;
         this.currentOperand = this.currentOperand + number;
