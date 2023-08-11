@@ -2,7 +2,7 @@
 
 const numbersButton = document.querySelectorAll('.numbers');
 const operationButton = document.querySelectorAll('.operations');
-const deleteButton = document.querySelector('.delete');
+const deleteButton = document.querySelector('.delete2');
 const clearAllButton = document.querySelector('.all-clear')
 const equalsButton = document.querySelector('.equals');
 const previousOperandTextElement = document.querySelector('.previous-operand');
