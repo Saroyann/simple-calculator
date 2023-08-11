@@ -44,6 +44,7 @@ class Calculator {
         this.currentOperand = '';
     }
 
+    // Perform computation between previous and current operands based on the chosen operation.
     compute() {
         let computation;
         const prev = parseFloat(this.previousOperand);
@@ -73,6 +74,7 @@ class Calculator {
         this.previousOperand = '';
     }
 
+    // Format the number display appropriately.
     getDisplayNumber(number) {
         const stringNumber = number.toString();
         const parts = stringNumber.split('.');
@@ -84,6 +86,7 @@ class Calculator {
         return decimalDigits != null ? `${integerDisplay}.${decimalDigits}` : integerDisplay;
     }
 
+    // Update the display of the current and previous operands.
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
         this.previousOperandTextElement.innerText = this.operation !== undefined ? `${this.getDisplayNumber(this.previousOperand)} ${this.operation}` : '';
@@ -91,6 +94,7 @@ class Calculator {
 
 }
 
+// Create an instance of the Calculator class with the previous and current operand text elements as arguments.
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
 numbersButton.forEach(button => {
