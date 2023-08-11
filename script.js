@@ -35,6 +35,7 @@ class Calculator {
         this.currentOperand = this.currentOperand + number;
     }
 
+    // Choose a mathematical operation and trigger computation if a previous operation exists.
     chooseOperation(operation) {
         if (this.currentOperand === '') return;
         if (this.previousOperand !== '') this.compute();
