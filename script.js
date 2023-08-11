@@ -16,6 +16,7 @@ class Calculator {
         this.clear();
     }
 
+      // Reset operands and operation to initial values.
     clear() {
         this.currentOperand = '';
         this.previousOperand = '';
