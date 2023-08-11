@@ -97,6 +97,7 @@ class Calculator {
 // Create an instance of the Calculator class with the previous and current operand text elements as arguments.
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
+// Add event listeners for number buttons.
 numbersButton.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText);
@@ -104,6 +105,7 @@ numbersButton.forEach(button => {
     })
 })
 
+// Add event listeners for operation buttons.
 operationButton.forEach(button => {
     button.addEventListener('click', () => {
         calculator.chooseOperation(button.innerText);
@@ -111,16 +113,19 @@ operationButton.forEach(button => {
     })
 })
 
+// Add event listeners for equals buttons.
 equalsButton.addEventListener('click', () => {
     calculator.compute();
     calculator.updateDisplay();
 })
 
+// Add event listeners for all clear buttons.
 clearAllButton.addEventListener('click', () => {
     calculator.clear();
     calculator.updateDisplay();
 })
 
+// Add event listeners for delete buttons.
 deleteButton.addEventListener('click', () => {
     calculator.delete();
     calculator.updateDisplay();
