@@ -1,5 +1,5 @@
 'use strict';
-
+// Select all number buttons, operation buttons, delete button, clear button, equals button, and text elements for previous and current operands.
 const numbersButton = document.querySelectorAll('.numbers');
 const operationButton = document.querySelectorAll('.operations');
 const deleteButton = document.querySelector('.delete2');
@@ -8,6 +8,7 @@ const equalsButton = document.querySelector('.equals');
 const previousOperandTextElement = document.querySelector('.previous-operand');
 const currentOperandTextElement = document.querySelector('.current-operand')
 
+// Define the Calculator class to manage calculator operations.
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement;
